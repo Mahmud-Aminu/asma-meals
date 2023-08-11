@@ -1,0 +1,51 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  background: #1b2430;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  padding: 4px;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.logo a:hover {
+  color: #17cf97;
+}
+.logo p {
+  padding: 0;
+  color: white;
+}
+.social {
+  padding: 10px;
+}
+.social a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+.social a:hover {
+  color: #17cf97;
+}
+.social a:hover::after,
+.social a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #17cf97;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+@media screen and (max-width: 769px) {
+  .footer {
+    flex-direction: column;
+  }
+}
