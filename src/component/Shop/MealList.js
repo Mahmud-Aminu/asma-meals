@@ -1,7 +1,7 @@
 import MealCard from "./MealCard";
 import classes from "./MealList.module.css";
 import data from "../../data";
-const FoodList = () => {
+const MealList = () => {
   return (
     <div className={classes.container}>
       <div className={classes.card}>
@@ -9,9 +9,9 @@ const FoodList = () => {
           <MealCard
             key={meal.id}
             id={meal.id}
-            title={meal.title}
+            name={meal.name}
             src={meal.src}
-            amount={meal.amount}
+            price={meal.price}
             description={meal.description}
           />
         ))}
@@ -25,4 +25,4 @@ const FoodList = () => {
   );
 };
 
-export default FoodList;
+export default MealList;

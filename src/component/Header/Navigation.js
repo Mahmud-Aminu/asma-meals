@@ -1,8 +1,9 @@
 import "./Navigation.css";
-import { Menu, Close, ShoppingCartSharp } from "@mui/icons-material";
+import { Menu, Close } from "@mui/icons-material";
 
 import { useState, useContext } from "react";
 import AppContext from "../../store/app-context";
+import CartButton from "../Cart/CartButton";
 
 const Navbar = (props) => {
   const [clicked, setClicked] = useState(false);
@@ -37,14 +38,9 @@ const Navbar = (props) => {
             <li>
               <a href="/"> Contact </a>
             </li>
-            {props.showCart && (
-              <li onClick={ctx.openCartHandle}>
-                {" "}
-                <ShoppingCartSharp sx={{ color: "white" }} />
-              </li>
-            )}
           </ul>
         </div>
+        {props.showCart && <CartButton onClick={ctx.openCartHandle} />}
         <div className="mobile">
           <i onClick={!clicked ? showDrawer : closeDrawer}>
             {!clicked ? <Menu /> : <Close />}

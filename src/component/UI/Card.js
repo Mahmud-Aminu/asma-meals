@@ -13,7 +13,7 @@ export const Service = (props) => {
 
         <Typography level="title-lg" sx={{ color: "white" }}>
           Fastest Delivery. <br />
-          We Deliver before your food is turn cold, just five minute to order.
+          Delicious Food, Delivered To You.
         </Typography>
       </li>
       <li>
@@ -25,7 +25,9 @@ export const Service = (props) => {
       <li>
         <FoodBank sx={{ width: "100px", height: "100px", color: "#17cf97" }} />
         <Typography level="title-lg" sx={{ color: "white" }}>
-          Fresh food
+          Fresh food <br />
+          All our meals are cooked with high-quality ingredients, just-in-time
+          and of course by experienced chefs!
         </Typography>
       </li>
     </>
